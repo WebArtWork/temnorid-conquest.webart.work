@@ -1,0 +1,405 @@
+<!doctype html><html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Історія — Temnorid: Завоювання</title>
+<meta name="description" content="Хроніки Темнороду: Перше Завоювання. Історія світу Temnorid: Завоювання.">
+<link rel="canonical" href="https://temnorid-conquest.webart.work/story">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Temnorid: Завоювання">
+<meta property="og:url" content="https://temnorid-conquest.webart.work/story">
+<meta property="og:title" content="Temnorid: Conquest — The First Conquest">
+<meta property="og:description" content="The old balance of Temnorid has collapsed. The First Conquest begins.">
+<meta property="og:image" content="https://temnorid-conquest.webart.work/assets/hero.png">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Temnorid: Conquest — The First Conquest">
+<meta name="twitter:description" content="The old balance of Temnorid has collapsed. The First Conquest begins.">
+<meta name="twitter:image" content="https://temnorid-conquest.webart.work/assets/hero.png">
+<style>
+:root{--bg:#090b0a;--panel:#151814;--panel2:#191c17;--line:#343529;--paper:#e1d9c5;--text:#f1eee4;--muted:#aaa493;--gold:#b28a51;--teal:#7fc5b5;--red:#a84432}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font:18px/1.75 Georgia,serif}
+a{color:inherit;text-decoration:none}button,select{font:inherit}
+.sans,.top,.toc,.eyebrow,.num,.tag,.meta,.chip{font-family:Arial,sans-serif}
+.wrap{width:min(calc(100% - 40px),1320px);margin:auto}
+.prose{width:min(100%,760px);margin:0 auto}
+
+/* progress */
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0;z-index:40;transition:width .1s linear}
+
+/* header */
+.top{position:fixed;z-index:30;inset:0 0 auto;background:#090b0aee;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.topin{height:72px;display:flex;align-items:center;gap:26px}
+.brand{font-family:Georgia,serif;font-weight:bold;font-size:18px}
+.brand i{font-style:normal;color:var(--gold)}
+.links{display:flex;gap:22px;margin-left:auto;font-size:13px;color:#c9c4b7}
+.links a:hover,.links a.active{color:var(--teal)}
+.langs{border:1px solid var(--line);display:flex;padding:3px}
+.langs button{border:0;background:none;color:var(--muted);padding:6px 9px;font:700 12px Arial;cursor:pointer}
+.langs button.on{background:var(--gold);color:#111}
+
+/* hero */
+.hero{min-height:640px;display:flex;align-items:end;position:relative;background:
+linear-gradient(0deg,#090b0af8 5%,#090b0a99 45%,#090b0a55 75%),
+linear-gradient(90deg,#090b0af5,transparent 60%),
+url('assets/board.png') 50% 30%/cover}
+.hero .wrap{padding:170px 0 70px}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.22em;color:var(--teal);font-weight:bold}
+.hero h1{font-size:clamp(46px,7.5vw,96px);font-weight:400;line-height:.98;letter-spacing:-.04em;margin:16px 0 10px}
+.hero .subtitle{max-width:720px;font-size:21px;color:var(--paper);margin:0 0 20px}
+.hero .subtitle p{margin:0 0 6px}
+.hero .intro{max-width:700px;color:#c9c4b3;font-size:17px}
+.hero .intro p{margin:0 0 4px}
+.hero .cta-row{display:flex;align-items:center;gap:18px;margin-top:26px;flex-wrap:wrap}
+.btn{display:inline-block;border:1px solid #ffffff44;padding:13px 20px;font:700 12px Arial;text-transform:uppercase;letter-spacing:.1em;cursor:pointer;background:transparent;color:var(--text)}
+.btn.primary{background:var(--gold);color:#111;border-color:var(--gold)}
+.hero .meta{color:var(--muted);font-size:13px}
+
+/* layout */
+.layout{display:grid;grid-template-columns:230px 1fr;gap:60px;padding:60px 0 40px}
+.toc{position:sticky;top:95px;height:fit-content;border-left:1px solid var(--line)}
+.toc a{display:block;font-size:12.5px;color:#8f8a7c;padding:8px 14px;border-left:2px solid transparent;margin-left:-1px}
+.toc a:hover{color:var(--text)}
+.toc a.active{color:var(--teal);border-left-color:var(--teal)}
+.toc-mobile{display:none}
+
+/* chapters */
+.chapter{padding:70px 0;border-bottom:1px solid var(--line)}
+.chapter:first-child{padding-top:10px}
+.num{display:block;color:var(--gold);font-size:12px;letter-spacing:.18em;margin-bottom:10px}
+.chapter h2{font-size:clamp(30px,4vw,46px);font-weight:400;line-height:1.08;letter-spacing:-.02em;margin:0 0 30px}
+.chapter p{color:#cfc9bb;margin:0 0 16px}
+blockquote{border-left:3px solid var(--gold);margin:34px 0;padding:2px 0 2px 26px;font-size:26px;line-height:1.35;font-style:italic;color:var(--paper)}
+
+/* illustration placeholder */
+.illust{margin:36px 0;border:1px dashed #5a5847;background:linear-gradient(150deg,#1c1f19,#0d0f0d);min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px}
+.illust b{color:var(--gold);font:700 11px/1.4 Arial;letter-spacing:.1em;text-transform:uppercase}
+.illust span{color:var(--muted);font:13px Arial;max-width:520px}
+.illust.wide{aspect-ratio:21/9;min-height:0}
+.caption{text-align:center;color:var(--muted);font:italic 14px Georgia,serif;margin-top:-22px;margin-bottom:36px}
+
+/* map / artifact break */
+.break{padding:50px 0;text-align:center}
+.break .eyebrow{display:block;margin-bottom:14px}
+
+/* final panel */
+.final{padding:110px 0;background:linear-gradient(90deg,#090b0af5,#090b0a95,transparent),url('assets/throne.png') center/cover}
+.final .wrap{width:min(calc(100% - 40px),760px)}
+.final h2{font-size:clamp(36px,5.5vw,58px);font-weight:400;line-height:1.05}
+.final p{color:var(--paper);font-size:18px}
+.final .actions{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+
+/* archive */
+.archive{padding:90px 0}
+.archive-head{text-align:center;max-width:600px;margin:0 auto 46px}
+.archive-head h2{font-size:clamp(28px,4vw,40px);font-weight:400;margin:10px 0}
+.archive-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.acard{border:1px solid var(--line);background:var(--panel);padding:0;overflow:hidden;display:flex;flex-direction:column}
+.acard .cover{aspect-ratio:16/9;background:linear-gradient(150deg,#20241d,#0d0f0d);display:flex;align-items:center;justify-content:center;color:var(--muted);font:11px Arial;text-transform:uppercase;letter-spacing:.1em}
+.acard .body{padding:20px}
+.acard .rel{color:var(--gold);font:700 11px Arial;letter-spacing:.12em;text-transform:uppercase}
+.acard h3{font-weight:400;font-size:22px;margin:8px 0}
+.acard p{color:var(--muted);font-size:14px;margin:0 0 12px}
+.chip{display:inline-block;font-size:11px;padding:4px 9px;border:1px solid var(--line);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.chip.current{color:#111;background:var(--teal);border-color:var(--teal)}
+.acard.soon{opacity:.6}
+
+/* prev/next story nav */
+.storynav{display:flex;justify-content:space-between;gap:20px;padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted)}
+.storynav a{max-width:45%}
+.storynav .dir{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.storynav b{display:block;color:var(--text);font-weight:400;font-size:17px;margin-top:4px}
+.storynav .disabled{opacity:.35;pointer-events:none}
+
+/* metadata footer */
+.metafoot{padding:34px 0;color:var(--muted);font:12px Arial}
+.metafoot .wrap{display:flex;gap:34px;flex-wrap:wrap}
+.metafoot b{display:block;color:var(--paper);font:15px Georgia,serif}
+
+.continue-toast{position:fixed;left:50%;bottom:26px;z-index:35;transform:translate(-50%,20px);background:#171a17;border:1px solid var(--gold);padding:14px 20px;font:13px Arial;color:var(--paper);opacity:0;pointer-events:none;transition:.3s}
+.continue-toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.continue-toast a{color:var(--teal);font-weight:bold}
+
+@media(max-width:900px){
+.layout{grid-template-columns:1fr;gap:0}
+.toc{display:none}
+.toc-mobile{display:block;position:sticky;top:64px;z-index:15;background:#090b0af5;border-bottom:1px solid var(--line);padding:10px 0;backdrop-filter:blur(10px)}
+.toc-mobile select{width:100%;background:var(--panel);color:var(--text);border:1px solid var(--line);padding:10px 12px}
+.cards{grid-template-columns:1fr}
+}
+@media(max-width:580px){
+.wrap{width:min(calc(100% - 24px),1320px)}
+.links{display:none}
+.topin{height:64px}
+.hero{min-height:520px}.hero .wrap{padding:120px 0 46px}
+.chapter{padding:46px 0}
+blockquote{font-size:21px}
+.storynav{flex-direction:column}
+.storynav a{max-width:100%}
+}
+</style></head>
+<body>
+<div id="progress"></div>
+<header class="top"><div class="wrap topin">
+<a class="brand" href="index.html">Temnorid: <i data-uk="Завоювання" data-en="Conquest">Завоювання</i></a>
+<nav class="links">
+<a href="play.html" data-uk="Грати" data-en="Play">Грати</a>
+<a href="/rules" data-uk="Правила" data-en="Rules">Правила</a>
+<a class="active" href="/story" data-uk="Історія" data-en="Story">Історія</a>
+<a href="index.html#world" data-uk="Світ" data-en="World">Світ</a>
+</nav>
+<div class="langs"><button class="on" data-lang="uk">UA</button><button data-lang="en">EN</button></div>
+</div></header>
+
+<section class="hero">
+<div class="wrap">
+<p class="eyebrow" data-uk="ХРОНІКИ TEMNORID · RELEASE I" data-en="CHRONICLES OF TEMNORID · RELEASE I">ХРОНІКИ TEMNORID · RELEASE I</p>
+<h1 data-uk="Перше Завоювання" data-en="The First Conquest">Перше Завоювання</h1>
+<div class="subtitle" data-uk="&lt;p&gt;Війна почалася не тоді, коли було піднято перший меч.&lt;/p&gt;&lt;p&gt;Вона почалася тоді, коли старий порядок перестав працювати.&lt;/p&gt;" data-en="&lt;p&gt;The war did not begin when the first sword was raised.&lt;/p&gt;&lt;p&gt;It began when the old order stopped working.&lt;/p&gt;"><p>Війна почалася не тоді, коли було піднято перший меч.</p><p>Вона почалася тоді, коли старий порядок перестав працювати.</p></div>
+<div class="intro" id="heroIntro"></div>
+<div class="cta-row">
+<a class="btn primary" href="#prologue" data-uk="Почати читати" data-en="Begin Reading">Почати читати</a>
+<span class="meta" data-uk="7 розділів · приблизно 15 хв читання" data-en="7 Chapters · About 15 min">7 розділів · приблизно 15 хв читання</span>
+</div>
+</div>
+</section>
+
+<div class="toc-mobile"><div class="wrap"><select id="chapterSelect"></select></div></div>
+
+<div class="wrap layout">
+<aside class="toc" id="toc"></aside>
+<main class="prose" id="content"></main>
+</div>
+
+<section class="final">
+<div class="wrap">
+<p class="eyebrow" data-uk="КІНЕЦЬ · RELEASE I" data-en="END · RELEASE I">КІНЕЦЬ · RELEASE I</p>
+<h2 data-uk="Історія продовжиться" data-en="The Story Will Continue">Історія продовжиться</h2>
+<p data-uk="Перше Завоювання лише почалося. Рішення гравців, нові сили та майбутні релізи відкриватимуть наступні сторінки історії Темнороду. Наступна хроніка з'явиться разом із наступним великим оновленням." data-en="The First Conquest has only begun. New powers, new events and future releases will reveal the next chapters in the history of Temnorid. The next Chronicle will arrive with the next major update.">Перше Завоювання лише почалося.</p>
+<div class="actions">
+<a class="btn primary" href="play.html" data-uk="Грати" data-en="Play">Грати</a>
+<a class="btn" href="#archive" data-uk="Попередні історії" data-en="Previous Stories">Попередні історії</a>
+</div>
+</div>
+</section>
+
+<div class="wrap">
+<div class="storynav">
+<a class="disabled"><span class="dir" data-uk="← Попередня хроніка" data-en="← Previous Chronicle">← Попередня хроніка</span><b>—</b></a>
+<a class="disabled" style="text-align:right"><span class="dir" data-uk="Наступна хроніка →" data-en="Next Chronicle →">Наступна хроніка →</span><b data-uk="Незабаром" data-en="Coming Soon">Незабаром</b></a>
+</div>
+</div>
+
+<section class="archive" id="archive">
+<div class="wrap">
+<div class="archive-head">
+<p class="eyebrow" data-uk="ХРОНІКИ" data-en="CHRONICLES">ХРОНІКИ</p>
+<h2 data-uk="Історії Темнороду" data-en="Stories of Temnorid">Історії Темнороду</h2>
+<p data-uk="Кожен великий реліз Temnorid: Завоювання продовжує історію світу." data-en="Every major Temnorid: Conquest release continues the history of the world.">Кожен великий реліз Temnorid: Завоювання продовжує історію світу.</p>
+</div>
+<div class="cards">
+<article class="acard">
+<div class="cover" data-uk="Обкладинка історії" data-en="Story Cover">Обкладинка історії</div>
+<div class="body">
+<span class="rel">Release I</span>
+<h3 data-uk="Перше Завоювання" data-en="The First Conquest">Перше Завоювання</h3>
+<p data-uk="Стара рівновага Темнороду руйнується, і сили світу починають боротьбу за майбутнє." data-en="The old balance of Temnorid collapses and the powers of the world begin fighting for its future.">Стара рівновага Темнороду руйнується, і сили світу починають боротьбу за майбутнє.</p>
+<span class="chip current" data-uk="Поточна історія" data-en="Current Story">Поточна історія</span>
+</div>
+</article>
+<article class="acard soon">
+<div class="cover">???</div>
+<div class="body">
+<span class="rel">Release II</span>
+<h3>???</h3>
+<p data-uk="Нова хроніка з'явиться разом із наступним релізом." data-en="A new Chronicle will arrive with the next release.">Нова хроніка з'явиться разом із наступним релізом.</p>
+<span class="chip" data-uk="Незабаром" data-en="Coming Soon">Незабаром</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<div class="metafoot"><div class="wrap">
+<div><b>001</b><span data-uk="Хроніка" data-en="Chronicle">Хроніка</span></div>
+<div><b>I</b><span data-uk="Реліз" data-en="Release">Реліз</span></div>
+<div><b data-uk="Чернетка лору" data-en="Draft Lore">Чернетка лору</b><span data-uk="Статус" data-en="Status">Статус</span></div>
+<div><b data-uk="Українська / English" data-en="English / Ukrainian">Українська / English</b><span data-uk="Мова" data-en="Language">Мова</span></div>
+</div></div>
+
+<div class="continue-toast" id="continueToast"></div>
+
+<script>
+const CH = {
+uk: [
+ {id:'prologue',num:'ПРОЛОГ',title:'Коли перестали звучати дзвони',
+  body:["Першими це помітили торговці.","На північній дорозі перестали з'являтися каравани.","Спочатку ніхто не хвилювався.","Дороги Темнороду ніколи не були безпечними. Розбійники, звірі, обвали в горах — причин для затримки могло бути сотні.","Потім не повернувся другий караван.","Потім третій.","На сьомий день ворота прикордонної фортеці залишилися зачиненими.","Її сигнальні вогні не запалилися.","Вартові на сусідніх баштах посилали повідомлення, але відповіді не було.","На десятий день до столиці прибув вершник.","Кінь помер просто біля міських воріт.","Вершник прожив ще достатньо довго, щоб передати командиру варти маленький металевий циліндр.","Усередині була лише одна записка.","Без печатки.","Без підпису.","Три слова.","«Вони вже рухаються.»"],
+  quote:null,
+  illust:{label:'Ілюстрація · Пролог',desc:'Нічна прикордонна фортеця. Усі сигнальні башти навколо горять вогнями. Центральна фортеця темна. Вершник рухається на передній план.'}},
+ {id:'r1',num:'РОЗДІЛ I',title:'Тиша перед бурею',
+  body:["Новина не стала публічною.","Такі новини ніколи не стають публічними одразу.","Спочатку їх читають ті, хто вважає себе достатньо сильним, щоб вирішувати долю інших.","У ту ніч двері Великої Ради були зачинені.","За ними сперечалися правителі, воєначальники, маги та посланці старих домів.","Одні вимагали негайно відправити армію.","Інші називали повідомлення пасткою.","Треті мовчали.","Саме мовчазні були найнебезпечнішими.","Бо поки Рада сперечалася, по всьому Темнороду вирушали інші посланці.","Не державні.","Приватні.","Листи передавалися через людей, які не задавали запитань.","Монети переходили з рук у руки.","Старі договори діставали з архівів.","Імена, які роками не вимовляли вголос, знову почали з'являтися у розмовах.","Кожен розумів одне: якщо стара рівновага справді руйнується, зараз настав момент зайняти місце, яке завтра може належати комусь іншому."],
+  quote:'Війни починаються задовго до того, як солдати бачать поле битви.',
+  illust:{label:'Ілюстрація · Розділ I',desc:'Інтер’єр величезної кам’яної зали Ради. Силуети навколо круглого столу. Кілька крісел навмисно порожні. Посланець біля великих зачинених дверей.'}},
+ {id:'r2',num:'РОЗДІЛ II',title:'Порожній престол',
+  body:["У центрі Великої Ради стояло місце, яке не належало нікому.","Кам'яне крісло.","Старі хроніки називали його Престолом Єдності.","Молодші називали простіше: порожнім престолом.","Ніхто не сидів на ньому вже багато поколінь.","Після останньої великої війни правителі Темнороду домовилися, що жодна сила більше не матиме права говорити від імені всього світу.","Тому престол залишили.","Не як символ влади.","Як попередження.","Але символи змінюються, коли змінюються люди.","Для одних порожній престол означав мир.","Для інших — можливість.","Того вечора один із радників затримався у залі після завершення Ради.","Він довго дивився на кам'яне крісло.","Потім тихо сказав: «Рано чи пізно хтось сяде.»","У темряві за колонами хтось почув ці слова."],
+  quote:null,
+  illust:{label:'Ілюстрація · Розділ II',desc:'Величезний порожній кам’яний престол у стародавній залі. Крихітна людська фігура на передньому плані. Світло падає на престол. Темна постать серед колон.'}},
+ {id:'r3',num:'РОЗДІЛ III',title:'Посланці',
+  body:["До ранку Темнорід уже змінився.","Просто більшість людей цього ще не знала.","В одному місті відкрили військові склади.","В іншому закрили ворота.","На півдні вершники почали скуповувати коней за будь-яку ціну.","У гірських поселеннях зникли запаси металу.","Маги відправляли учнів до старих руїн, які десятиліттями вважалися небезпечними навіть для них.","А далеко від великих міст невідомі люди почали розкопувати камені, на яких були викарбувані символи старшої епохи.","У кожного був свій план.","І майже кожен був переконаний, що саме він розуміє ситуацію краще за інших.","А тим часом маленькі загони вирушали до місць, які ще вчора не мали стратегічного значення.","Перехрестя.","Мости.","Шахти.","Руїни.","Святилища.","Старі фортеці.","У війні важливі не тільки землі.","Важливі місця, через які проходить сила."],
+  quote:null,
+  illust:{label:'Ілюстрація · Розділ III',desc:'Велика карта Темнороду. Кілька посланців рухаються одночасно у різних напрямках. Малі армії на далеких дорогах. Старі руїни ледь мерехтять.'}},
+ {id:'r4',num:'РОЗДІЛ IV',title:'Перша кров',
+  body:["Ніхто так і не дізнався, хто атакував першим.","Обидві сторони пізніше стверджували, що лише захищалися.","Це вже не мало значення.","Бій відбувся біля старого кам'яного мосту.","Менше сотні воїнів.","Жодного великого правителя.","Жодного легендарного героя.","Жодної магії, про яку потім писали б пісні.","Але до вечора двадцять сім людей лежали мертвими.","Міст залишився стояти.","Новина про бій розлетілася швидше, ніж будь-який офіційний наказ.","Через день згоріло два прикордонних склади.","Через два — зник дипломатичний караван.","Через три — одна з фортець підняла новий прапор.","На четвертий день Велика Рада зібралася знову.","Цього разу ніхто не говорив про те, чи почалася війна.","Вони говорили лише про те, хто до неї готовий."],
+  quote:null,
+  illust:{label:'Ілюстрація · Розділ IV',desc:'Старий кам’яний міст після невеликої битви. Розбиті щити, покинута зброя, дим. Два ворожі прапори на протилежних кінцях.'}},
+ {id:'r5',num:'РОЗДІЛ V',title:'Ціна союзу',
+  body:["Коли армії почали рухатися, правителі згадали про своїх союзників.","А союзники згадали про борги.","Ніхто не пропонував допомогу безкоштовно.","Одні вимагали золото.","Інші — доступ до старих знань.","Дехто хотів землю.","Дехто хотів право пройти військом через чужі міста.","Були й ті, хто не просив нічого.","Їх боялися найбільше.","Посли приходили вночі.","Угоди підписувалися без свідків.","Старі вороги раптом ставали партнерами.","Старі друзі починали рахувати, скільки коштуватиме зрада.","Союз був силою.","Але кожен союз мав ціну.","І часто цю ціну дізнавалися лише тоді, коли вже було пізно відмовитися."],
+  quote:'Справжня ціна союзу стає зрозумілою лише тоді, коли він тобі найбільше потрібен.',
+  illust:{label:'Ілюстрація · Розділ V',desc:'Таємна зустріч союзників. Дві впливові постаті на протилежних кінцях кам’яного столу. Руки над картою / скріпленою угодою. Інші представники спостерігають з тіні.'}},
+ {id:'r6',num:'РОЗДІЛ VI',title:'Вогні на дорогах',
+  body:["До кінця місяця дороги Темнороду світилися вночі.","Не від ліхтарів.","Від табірних вогнів.","Тисячі людей рухалися назустріч війні.","Воїни.","Маги.","Найманці.","Розвідники.","Ковалі.","Лікарі.","Торговці.","І ті, хто завжди з'являється там, де старий порядок починає руйнуватися.","На дорогах говорили про героїв.","Одні вже мали відомі імена.","Інші ще не зробили нічого, про що варто було б писати.","Але великі війни завжди створюють нові легенди.","Десь серед цих колон ішли люди, чиї рішення незабаром визначатимуть долю цілих міст.","Вони цього ще не знали.","Темнорід — знав."],
+  quote:null,
+  illust:{label:'Ілюстрація · Розділ VI',desc:'Величезний караван армії вночі. Сотні багать простягаються через долину. Кілька окремих груп подорожують разом. Магічне світло переплітається зі звичайним вогнем.'}},
+ {id:'r7',num:'РОЗДІЛ VII',title:'Завоювання починається',
+  body:["На тридцять третій день після зникнення першого каравану сигнальні вогні запалилися по всьому Темнороду.","Один.","Другий.","Третій.","Від гір до рівнин.","Від старих фортець до великих міст.","Цього разу вони не попереджали про напад.","Вони передавали наказ.","Армії рушили.","Ворота відчинилися.","Герої отримали свої завдання.","Посли вирушили до фракцій, які ще не обрали сторону.","У сховищах відкривали ящики, яких не торкалися поколіннями.","У старих руїнах щось відповіло на магію тих, хто шукав силу.","А в залі Великої Ради Порожній Престол залишався без власника.","Поки що.","Бо відтепер питання було вже не в тому, чи хтось спробує його зайняти.","Питання було лише: хто дістанеться до нього першим?"],
+  quote:null,
+  final:'Так почалося Перше Завоювання.',
+  illust:{label:'Ілюстрація · Розділ VII',desc:'Широкий пейзаж Темнороду на світанку. Кілька армій рухаються з різних напрямків. Герої видні як малі фігури на передньому плані. Сигнальні вогні світяться по всьому світу.'}}
+],
+en: [
+ {id:'prologue',num:'PROLOGUE',title:'When the Bells Fell Silent',
+  body:["The merchants noticed first.","Caravans stopped appearing on the northern road.","At first, nobody was concerned.","The roads of Temnorid had never been safe. Bandits, beasts, mountain collapses — there were hundreds of reasons for a caravan to arrive late.","Then a second caravan failed to return.","Then a third.","On the seventh day, the gates of the border fortress remained closed.","Its signal fires were never lit.","Guards on neighboring towers sent messages, but received no answer.","On the tenth day, a rider reached the capital.","His horse died just outside the city gates.","The rider lived long enough to hand the captain of the guard a small metal cylinder.","Inside was a single message.","No seal.","No signature.","Three words.","\"They are already moving.\""],
+  quote:null,
+  illust:{label:'Illustration · Prologue',desc:'Nighttime border fortress. All signal towers around it show distant fires. The central fortress is completely dark. One rider travelling toward foreground.'}},
+ {id:'r1',num:'CHAPTER I',title:'Before the Storm',
+  body:["The news was not made public.","News like this never becomes public immediately.","First it is read by those who believe themselves powerful enough to decide the fate of everyone else.","That night, the doors of the Great Council were sealed.","Behind them, rulers, commanders, mages and representatives of ancient houses argued.","Some demanded that an army be sent immediately.","Others called the message a trap.","A few remained silent.","The silent ones were the most dangerous.","Because while the Council argued, other messengers were already leaving cities across Temnorid.","Not official messengers.","Private ones.","Letters moved through hands that asked no questions.","Coins changed owners.","Ancient agreements were pulled from forgotten archives.","Names that had not been spoken for years returned to whispered conversations.","Everyone understood the same thing: if the old balance was truly collapsing, now was the moment to claim a place that might belong to someone else tomorrow."],
+  quote:'Wars begin long before soldiers see the battlefield.',
+  illust:{label:'Illustration · Chapter I',desc:'Interior of enormous stone council chamber. Many silhouettes around circular table. Several seats deliberately empty. A messenger standing near giant closed doors.'}},
+ {id:'r2',num:'CHAPTER II',title:'The Empty Throne',
+  body:["At the center of the Great Council stood a seat that belonged to no one.","A throne carved from stone.","The oldest chronicles called it the Throne of Unity.","Younger generations used a simpler name: the Empty Throne.","No one had sat upon it for generations.","After the last great war, the rulers of Temnorid agreed that no single power would ever again speak for the entire world.","And so the throne remained.","Not as a symbol of authority.","As a warning.","But symbols change when people change.","To some, the empty throne represented peace.","To others — opportunity.","That evening, one adviser remained in the chamber after the Council ended.","For a long time he stared at the stone seat.","Then he quietly said: \"Sooner or later, someone will sit there.\"","Someone listening in the darkness behind the columns heard every word."],
+  quote:null,
+  illust:{label:'Illustration · Chapter II',desc:'Massive empty stone throne inside ancient chamber. Tiny human figure in foreground. Light falling onto throne. Dark figure barely visible behind distant column.'}},
+ {id:'r3',num:'CHAPTER III',title:'The Messengers',
+  body:["By morning, Temnorid had already changed.","Most people simply did not know it yet.","In one city, military storehouses were opened.","In another, the gates were sealed.","In the south, riders began buying horses at any price.","Metal supplies disappeared from mountain settlements.","Mages sent apprentices toward ancient ruins that even they had avoided for decades.","And far from the great cities, unknown groups began excavating stones covered in symbols from an older age.","Everyone had a plan.","And almost everyone believed they understood the situation better than the rest.","Meanwhile, small forces moved toward places that only yesterday seemed strategically meaningless.","Crossroads.","Bridges.","Mines.","Ruins.","Shrines.","Ancient fortresses.","Wars are not fought only for land.","They are fought for the places through which power flows."],
+  quote:null,
+  illust:{label:'Illustration · Chapter III',desc:'Large fantasy map scene. Several messengers/riders moving simultaneously in different directions. Small armies visible on distant roads. Old ruins glowing faintly.'}},
+ {id:'r4',num:'CHAPTER IV',title:'First Blood',
+  body:["No one ever learned who attacked first.","Both sides later claimed they had only defended themselves.","It no longer mattered.","The battle happened beside an old stone bridge.","Fewer than a hundred soldiers.","No great rulers.","No legendary heroes.","No magic that would later be remembered in songs.","But by sunset, twenty-seven people were dead.","The bridge remained standing.","News of the battle travelled faster than any official command.","A day later, two border storehouses burned.","Two days later — a diplomatic caravan disappeared.","Three days later — one fortress raised a new banner.","On the fourth day, the Great Council assembled again.","This time nobody debated whether a war had begun.","They discussed only who was ready for it."],
+  quote:null,
+  illust:{label:'Illustration · Chapter IV',desc:'Old stone bridge after small battle. Broken shields, abandoned weapons, smoke. Two opposing banners visible at opposite ends.'}},
+ {id:'r5',num:'CHAPTER V',title:'The Price of Alliance',
+  body:["When armies began to move, rulers remembered their allies.","And their allies remembered old debts.","Nobody offered help freely.","Some demanded gold.","Others — access to ancient knowledge.","Some wanted land.","Some wanted the right to march armies through another ruler's cities.","There were also those who asked for nothing.","They were feared most of all.","Envoys arrived at night.","Agreements were signed without witnesses.","Old enemies suddenly became partners.","Old friends began calculating the value of betrayal.","An alliance was power.","But every alliance had a price.","And often that price became clear only when it was already too late to refuse."],
+  quote:'The true price of an alliance becomes clear only when you need it most.',
+  illust:{label:'Illustration · Chapter V',desc:'Secret alliance meeting. Two powerful figures at opposite ends of a stone table. Hands meeting over map / sealed agreement. Other representatives watching from shadows.'}},
+ {id:'r6',num:'CHAPTER VI',title:'Fires on the Roads',
+  body:["By the end of the month, the roads of Temnorid glowed at night.","Not with lanterns.","With campfires.","Thousands of people were moving toward war.","Soldiers.","Mages.","Mercenaries.","Scouts.","Blacksmiths.","Healers.","Merchants.","And those who always appear when the old order begins to collapse.","Along the roads, people spoke of heroes.","Some already carried famous names.","Others had not yet done anything worth recording.","But great wars always create new legends.","Somewhere among those columns walked people whose decisions would soon determine the fate of entire cities.","They did not know it yet.","Temnorid did."],
+  quote:null,
+  illust:{label:'Illustration · Chapter VI',desc:'Huge army caravan at night. Hundreds of small campfires stretching through valley. Several distinct groups travelling together. Magical lights mixed subtly with ordinary fire.'}},
+ {id:'r7',num:'CHAPTER VII',title:'The Conquest Begins',
+  body:["On the thirty-third day after the first caravan disappeared, signal fires were lit across Temnorid.","One.","Then another.","Then another.","From the mountains to the plains.","From ancient fortresses to the greatest cities.","This time they did not warn of an attack.","They carried an order.","The armies began to move.","The gates opened.","Heroes received their missions.","Envoys departed toward factions that had not yet chosen a side.","In hidden vaults, containers untouched for generations were opened.","Within ancient ruins, something answered the magic of those searching for power.","And inside the Great Council, the Empty Throne remained without an owner.","For now.","Because the question was no longer whether someone would attempt to claim it.","The only question was: who would reach it first?"],
+  quote:null,
+  final:'And so the First Conquest began.',
+  illust:{label:'Illustration · Chapter VII',desc:'Wide Temnorid landscape at dawn. Multiple armies moving from different directions. Heroes visible as small figures in foreground. Signal fires glowing throughout world.'}}
+]
+};
+
+const MAP_BREAK = {uk:'Темнорід напередодні війни',en:'Temnorid on the Eve of War'};
+const ARTIFACT_BREAK = {uk:'Не всі договори Темнороду були призначені для архівів.',en:'Not every agreement in Temnorid was meant for the archives.'};
+const INTRO = {
+uk:["Протягом поколінь Темнорід існував завдяки крихкій рівновазі.","Міста торгували.","Фортеці охороняли старі дороги.","Маги берегли знання, які більшість людей давно перестала розуміти.","Правителі укладали союзи, порушували їх і знову сідали за один стіл, коли ціна війни ставала надто високою.","Але рівновага ніколи не означала мир.","Вона лише означала, що всі боялися зробити перший крок.","Тепер цей страх зник."],
+en:["For generations, Temnorid survived through a fragile balance.","Cities traded.","Fortresses guarded the ancient roads.","Mages protected knowledge most people had long forgotten how to understand.","Rulers formed alliances, broke them, and returned to the same table whenever the price of war became too high.","But balance never meant peace.","It only meant that everyone feared making the first move.","That fear is gone."]
+};
+
+let lang = localStorage.getItem('temnorid-lang') || 'uk';
+const content = document.getElementById('content');
+const toc = document.getElementById('toc');
+const select = document.getElementById('chapterSelect');
+
+function render(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-uk]').forEach(e=>{
+    if(e.id==='content'||e.id==='toc') return;
+    e.innerHTML = e.dataset[lang];
+  });
+  document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on', b.dataset.lang===lang));
+  document.getElementById('heroIntro').innerHTML = INTRO[lang].map(p=>`<p>${p}</p>`).join('');
+
+  content.innerHTML='';
+  toc.innerHTML='';
+  select.innerHTML='';
+
+  CH[lang].forEach((c,i)=>{
+    const s = document.createElement('section');
+    s.className='chapter';
+    s.id=c.id;
+    let html = `<span class="num">${c.num}</span><h2>${c.title}</h2>`;
+    html += c.body.map(p=>`<p>${p}</p>`).join('');
+    if(c.quote) html += `<blockquote>${c.quote}</blockquote>`;
+    if(c.illust) html += `<div class="illust"><b>${c.illust.label}</b><span>${c.illust.desc}</span></div>`;
+    if(c.final) html += `<p style="color:var(--paper);font-size:22px;margin-top:30px">${c.final}</p>`;
+    s.innerHTML = html;
+    content.appendChild(s);
+
+    if(i===2){
+      const b = document.createElement('div');
+      b.className='break';
+      b.innerHTML = `<span class="eyebrow">${MAP_BREAK[lang]}</span><div class="illust wide"><b>${lang==='uk'?'Карта · Темнорід':'Map · Temnorid'}</b><span>${lang==='uk'?'Канонічна карта світу з ключовими дорогами, містами й фортецями.':'Canonical world map highlighting key roads, cities and fortresses.'}</span></div>`;
+      content.appendChild(b);
+    }
+    if(i===4){
+      const b = document.createElement('div');
+      b.className='break';
+      b.innerHTML = `<div class="illust"><b>${lang==='uk'?'Артефакт · Скріплена угода':'Artifact · Sealed Agreement'}</b><span>${ARTIFACT_BREAK[lang]}</span></div>`;
+      content.appendChild(b);
+    }
+
+    const a = document.createElement('a');
+    a.href = '#'+c.id;
+    a.textContent = `${c.num} · ${c.title}`;
+    a.dataset.id = c.id;
+    toc.appendChild(a);
+
+    const opt = document.createElement('option');
+    opt.value = c.id;
+    opt.textContent = `${c.num} · ${c.title}`;
+    select.appendChild(opt);
+  });
+
+  localStorage.setItem('temnorid-lang', lang);
+  markActive();
+}
+
+function markActive(){
+  const secs = [...content.querySelectorAll('.chapter')];
+  const y = window.scrollY + 140;
+  let current = secs[0];
+  secs.forEach(s=>{ if(s.offsetTop <= y) current = s; });
+  if(!current) return;
+  toc.querySelectorAll('a').forEach(a=>a.classList.toggle('active', a.dataset.id===current.id));
+  select.value = current.id;
+  history.replaceState(null,'','#'+current.id);
+  localStorage.setItem('temnorid-progress', current.id);
+  const total = document.body.scrollHeight - window.innerHeight;
+  const pct = total>0 ? Math.min(100, Math.round((window.scrollY/total)*100)) : 0;
+  document.getElementById('progress').style.width = pct+'%';
+}
+
+document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{ lang=b.dataset.lang; render(); });
+select.addEventListener('change', ()=>{ document.getElementById(select.value).scrollIntoView({behavior:'smooth'}); });
+window.addEventListener('scroll', markActive, {passive:true});
+
+render();
+
+const savedId = localStorage.getItem('temnorid-progress');
+if(savedId && location.hash.slice(1)!==savedId){
+  const target = CH[lang].find(c=>c.id===savedId);
+  if(target){
+    const toast = document.getElementById('continueToast');
+    const label = lang==='uk' ? 'Продовжити читання' : 'Continue Reading';
+    toast.innerHTML = `${label}<br><a href="#${savedId}">${target.num} — ${target.title}</a>`;
+    toast.classList.add('show');
+    setTimeout(()=>toast.classList.remove('show'), 6000);
+  }
+}
+</script>
+</body></html>

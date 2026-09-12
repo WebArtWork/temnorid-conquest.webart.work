@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /play/solo/
+Disallow: /production/
+
+Sitemap: https://temnorid-conquest.webart.work/sitemap.xml
