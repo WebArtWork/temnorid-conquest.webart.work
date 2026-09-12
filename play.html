@@ -4,10 +4,10 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Пошук гри — Temnorid: Завоювання</title>
 <meta name="description" content="Обери режим гри Temnorid: Завоювання.">
-<link rel="canonical" href="https://temnorid-conquest.webart.work/play.html">
+<link rel="canonical" href="https://temnorid-conquest.webart.work/play">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Temnorid: Завоювання">
-<meta property="og:url" content="https://temnorid-conquest.webart.work/play.html">
+<meta property="og:url" content="https://temnorid-conquest.webart.work/play">
 <meta property="og:title" content="Пошук гри — Temnorid: Завоювання">
 <meta property="og:description" content="Обери режим гри Temnorid: Завоювання.">
 <meta property="og:image" content="https://temnorid-conquest.webart.work/assets/hero.png">
@@ -23,7 +23,7 @@
 </style>
 </head>
 <body>
-<header class="nav"><div class="wrap navin"><a class="logo" href="index.html">Temnorid: <span data-uk="Завоювання" data-en="Conquest">Завоювання</span></a><nav class="links"><a class="active" href="play.html" data-uk="Грати" data-en="Play">Грати</a><a href="/rules" data-uk="Правила" data-en="Rules">Правила</a><a href="/story" data-uk="Історія" data-en="Story">Історія</a><a href="index.html#world" data-uk="Світ" data-en="World">Світ</a></nav><div class="langs"><button class="on" data-lang="uk">UA</button><button data-lang="en">EN</button></div></div></header>
+<header class="nav"><div class="wrap navin"><a class="logo" href="/">Temnorid: <span data-uk="Завоювання" data-en="Conquest">Завоювання</span></a><nav class="links"><a class="active" href="/play" data-uk="Грати" data-en="Play">Грати</a><a href="/rules" data-uk="Правила" data-en="Rules">Правила</a><a href="/story" data-uk="Історія" data-en="Story">Історія</a><a href="/#world" data-uk="Світ" data-en="World">Світ</a></nav><div class="langs"><button class="on" data-lang="uk">UA</button><button data-lang="en">EN</button></div></div></header>
 <main class="main"><div class="wrap">
 <section class="intro"><p class="eyebrow">Temnorid: <span data-uk="Завоювання" data-en="Conquest">Завоювання</span></p><h1 data-uk="Як ти хочеш грати?" data-en="How Do You Want to Play?">Як ти хочеш грати?</h1><p data-uk="Почни одиночне завоювання вже зараз. Онлайн-партії з іншими правителями з’являться пізніше." data-en="Begin a solo conquest now. Online matches with other rulers will arrive later.">Почни одиночне завоювання вже зараз.</p><div class="meta"><span data-uk="1–4 гравці" data-en="1–4 Players">1–4 гравці</span><span>60–120 min</span><span data-uk="Покрокова стратегія" data-en="Turn-Based Strategy">Покрокова стратегія</span></div></section>
 <section class="modes" aria-label="Game modes">
@@ -35,7 +35,7 @@
 <section class="lower"><div class="format"><div class="fact"><b data-uk="1–4 гравці" data-en="1–4 Players">1–4 гравці</b><span data-uk="Одна сила на гравця" data-en="One power per player">Одна сила на гравця</span></div><div class="fact"><b data-uk="60–120 хвилин" data-en="60–120 Minutes">60–120 хвилин</b><span data-uk="Залежить від стилю гри" data-en="Depends on play style">Залежить від стилю гри</span></div><div class="fact"><b data-uk="Покроково" data-en="Turn-Based">Покроково</b><span data-uk="Час на кожне рішення" data-en="Time for every decision">Час на кожне рішення</span></div><div class="fact"><b data-uk="Один переможець" data-en="One Winner">Один переможець</b><span data-uk="10 Очок Завоювання" data-en="10 Conquest Points">10 Очок Завоювання</span></div></div><aside class="help"><div><b data-uk="Граєш уперше?" data-en="First Game?">Граєш уперше?</b><span data-uk="Переглянь основні правила." data-en="Read the basic rules.">Переглянь основні правила.</span></div><a href="/rules" data-uk="Читати правила →" data-en="Read Rules →">Читати правила →</a></aside></section>
 <div class="status"><i></i><span data-uk="Режим прототипу · Онлайн-матчі ще не активовані" data-en="Prototype Mode · Online matchmaking is not active yet">Режим прототипу · Онлайн-матчі ще не активовані</span></div>
 </div></main>
-<footer><div class="wrap foot"><span>© Temnorid</span><nav><a href="index.html" data-uk="Головна" data-en="Home">Головна</a><a href="/rules" data-uk="Правила" data-en="Rules">Правила</a><a href="index.html#world" data-uk="Світ Temnorid" data-en="World of Temnorid">Світ Temnorid</a></nav></div></footer><div class="toast" id="toast"></div>
+<footer><div class="wrap foot"><span>© Temnorid</span><nav><a href="/" data-uk="Головна" data-en="Home">Головна</a><a href="/rules" data-uk="Правила" data-en="Rules">Правила</a><a href="/#world" data-uk="Світ Temnorid" data-en="World of Temnorid">Світ Temnorid</a></nav></div></footer><div class="toast" id="toast"></div>
 <script>
 let lang=localStorage.getItem('temnorid-lang')||'uk';function applyLang(){document.documentElement.lang=lang;document.querySelectorAll('[data-uk]').forEach(e=>e.textContent=e.dataset[lang]);document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));document.querySelectorAll('.card.disabled').forEach(c=>c.dataset.soon=lang==='uk'?'Незабаром':'Coming Soon');localStorage.setItem('temnorid-lang',lang)}document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;applyLang()});document.getElementById('solo').onclick=()=>{const t=document.getElementById('toast');t.textContent=lang==='uk'?'Одиночна гра — наступний етап розробки.':'Solo game is the next development stage.';t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),2800)};applyLang();
 </script>
