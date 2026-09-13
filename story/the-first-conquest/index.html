@@ -75,6 +75,9 @@ blockquote{border-left:3px solid var(--gold);margin:34px 0;padding:2px 0 2px 26p
 .illust b{color:var(--gold);font:700 11px/1.4 Arial;letter-spacing:.1em;text-transform:uppercase}
 .illust span{color:var(--muted);font:13px Arial;max-width:520px}
 .illust.wide{aspect-ratio:21/9;min-height:0}
+.illust.has-art{display:block;min-height:0;padding:0;border-style:solid;background:#090b0a;overflow:hidden}
+.illust.has-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.illust.has-art.wide img{aspect-ratio:21/9}
 .caption{text-align:center;color:var(--muted);font:italic 14px Georgia,serif;margin-top:-22px;margin-bottom:36px}
 
 /* map / artifact break */
@@ -335,7 +338,7 @@ function render(){
     let html = `<span class="num">${c.num}</span><h2>${c.title}</h2>`;
     html += c.body.map(p=>`<p>${p}</p>`).join('');
     if(c.quote) html += `<blockquote>${c.quote}</blockquote>`;
-    if(c.illust) html += `<div class="illust"><b>${c.illust.label}</b><span>${c.illust.desc}</span></div>`;
+    if(c.illust) html += `<figure class="illust has-art"><img src="../../assets/story/${i===0?'prologue':'chapter-'+String(i).padStart(2,'0')}.png" alt="${c.illust.desc}" loading="lazy"></figure>`;
     if(c.final) html += `<p style="color:var(--paper);font-size:22px;margin-top:30px">${c.final}</p>`;
     s.innerHTML = html;
     content.appendChild(s);
@@ -343,13 +346,13 @@ function render(){
     if(i===2){
       const b = document.createElement('div');
       b.className='break';
-      b.innerHTML = `<span class="eyebrow">${MAP_BREAK[lang]}</span><div class="illust wide"><b>${lang==='uk'?'Карта · Темнорід':'Map · Temnorid'}</b><span>${lang==='uk'?'Канонічна карта світу з ключовими дорогами, містами й фортецями.':'Canonical world map highlighting key roads, cities and fortresses.'}</span></div>`;
+      b.innerHTML = `<span class="eyebrow">${MAP_BREAK[lang]}</span><figure class="illust has-art wide"><img src="../../assets/board.png" alt="${lang==='uk'?'Карта Темнороду з ключовими дорогами, містами й фортецями':'Map of Temnorid with key roads, cities and fortresses'}" loading="lazy"></figure>`;
       content.appendChild(b);
     }
     if(i===4){
       const b = document.createElement('div');
       b.className='break';
-      b.innerHTML = `<div class="illust"><b>${lang==='uk'?'Артефакт · Скріплена угода':'Artifact · Sealed Agreement'}</b><span>${ARTIFACT_BREAK[lang]}</span></div>`;
+      b.innerHTML = `<figure class="illust has-art"><img src="../../assets/story/sealed-agreement.png" alt="${ARTIFACT_BREAK[lang]}" loading="lazy"></figure>`;
       content.appendChild(b);
     }
 
