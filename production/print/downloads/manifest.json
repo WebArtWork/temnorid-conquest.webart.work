@@ -1,0 +1,65 @@
+{
+  "gameVersion": "prototype-0.1",
+  "printKitVersion": "0.1",
+  "generatedAt": "2026-09-13T05:53:53.911269+00:00",
+  "status": "PROTOTYPE",
+  "standard": {
+    "dpi": 300,
+    "bleedMm": 3,
+    "safeZoneMm": 3
+  },
+  "files": [
+    {
+      "name": "PRINT_README_UA_EN.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "board-a4-complete.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "starting-cards-front.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "starting-cards-back.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "battle-cards-front.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "battle-cards-back.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "resources-front.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "player-board-print.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "solo-reference-UA.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "solo-reference-EN.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "quick-reference-UA.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "quick-reference-EN.pdf",
+      "type": "PDF"
+    },
+    {
+      "name": "print-test-a4.pdf",
+      "type": "PDF"
+    }
+  ]
+}

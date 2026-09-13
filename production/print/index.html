@@ -45,4 +45,40 @@ const comps=[
 const checks={uk:['Перевірено версію Print Kit','Обрано правильну мову','Перевірено кількість компонентів','Перевірено фізичні розміри','Перевірено bleed','Перевірено safe zone','Перевірено front/back orientation','Зроблено тестовий друк карт','Перевірено читабельність дрібного тексту','Перевірено кольори','Виробник підтвердив формат файлів'],en:['Print Kit version verified','Correct language selected','Component quantities verified','Physical dimensions verified','Bleed verified','Safe zone verified','Front/back orientation verified','Test card sheet printed','Small text readability checked','Colors checked','Manufacturer approved file specifications']};
 let lang='uk';function render(){document.documentElement.lang=lang;document.querySelectorAll('[data-k]').forEach(e=>e.textContent=copy[lang][e.dataset.k]);document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));$('#summary').innerHTML=[['1',lang==='uk'?'Поле':'Board'],['40+',lang==='uk'?'Карти':'Cards'],['TODO',lang==='uk'?'Жетони':'Tokens'],['4',lang==='uk'?'Планшети':'Player Boards'],['2',lang==='uk'?'Мови':'Languages'],['1',lang==='uk'?'Правила':'Rulebook'],['1',lang==='uk'?'Соло':'Solo Set']].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('');$('#nav').innerHTML=`<a href="#complete">${lang==='uk'?'Повний комплект':'Complete Kit'}</a><a href="#standards">${lang==='uk'?'Стандарт друку':'Print Standard'}</a>`+comps.map((c,i)=>`<a href="#${c[0]}">${String(i+1).padStart(2,'0')} · ${c[lang==='uk'?1:2]}</a>`).join('')+`<a href="#check">${lang==='uk'?'Перевірка':'Checklist'}</a><a href="#notes">${lang==='uk'?'Примітки':'Notes'}</a>`;$('#components').innerHTML=comps.map((c,i)=>`<section class="block" id="${c[0]}"><div class="component-head"><div><span class="kicker">${String(i+2).padStart(2,'0')} · COMPONENT</span><h2>${c[lang==='uk'?1:2]}</h2></div><span class="badge ${c[6].includes('PROGRESS')?'proto':''}">${c[6]}</span></div><div class="specgrid"><div class="spec"><small>${lang==='uk'?'Кількість':'Quantity'}</small><b>${c[3]}</b></div><div class="spec"><small>${lang==='uk'?'Фінальний розмір':'Finished size'}</small><b>${c[4]}</b></div><div class="spec"><small>Bleed</small><b>3 mm</b></div><div class="spec"><small>${lang==='uk'?'Матеріал':'Material'}</small><b>${c[5]}</b></div></div><div class="files">${c[7].map((f,j)=>`<div class="file"><div class="fileicon">${f.endsWith('.png')?'PNG':f.endsWith('.json')?'JSON':'PDF'}</div><div><b>${f.replace('UA',lang.toUpperCase()).replace('EN',lang.toUpperCase())}</b><small>${lang==='uk'?'Файл ще готується':'File pending'}</small><button class="btn previewBtn" data-comp="${c[lang==='uk'?1:2]}" data-file="${f}">${copy[lang].preview}</button> <button class="btn placeholder" data-label="${f}">↓</button></div></div>`).join('')}</div></section>`).join('');$('#checklist').innerHTML=checks[lang].map((x,i)=>`<label><input type="checkbox" data-check="${i}"> ${x}</label>`).join('');bind()}
 function $(s){return document.querySelector(s)}function bind(){document.querySelectorAll('.placeholder').forEach(b=>b.onclick=()=>toast(copy[lang].unavailable));document.querySelectorAll('.previewBtn').forEach(b=>b.onclick=()=>{$('#previewTitle').textContent=b.dataset.comp;$('#previewMeta').textContent=b.dataset.file+' · PROTOTYPE · 3 mm bleed';$('#preview').showModal()})}function toast(x){let e=$('#toast');e.textContent=x;e.style.display='block';clearTimeout(window.tt);window.tt=setTimeout(()=>e.style.display='none',2200)}document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;render()});$('#close').onclick=()=>$('#preview').close();render();
+</script>
+<script>
+const downloadable={
+  'ZIP · PDF':'temnorid-conquest_print-kit_pdf_v0.1.zip',
+  'ZIP · PNG':'temnorid-conquest_print-kit_png_300dpi_v0.1.zip',
+  'ALL':'temnorid-conquest_print-kit_all_v0.1.zip',
+  'HOME PROTOTYPE':'temnorid-conquest_print-kit_all_v0.1.zip',
+  'print-test-a4.pdf':'print-test-a4.pdf',
+  'board-a4-complete.pdf':'board-a4-complete.pdf',
+  'starting-cards-front.pdf':'starting-cards-front.pdf',
+  'starting-cards-back.pdf':'starting-cards-back.pdf',
+  'battle-cards-front.pdf':'battle-cards-front.pdf',
+  'battle-cards-back.pdf':'battle-cards-back.pdf',
+  'resources-front.pdf':'resources-front.pdf',
+  'player-board-print.pdf':'player-board-print.pdf',
+  'quick-reference-UA.pdf':'quick-reference-UA.pdf',
+  'quick-reference-EN.pdf':'quick-reference-EN.pdf',
+  'solo-reference-UA.pdf':'solo-reference-UA.pdf',
+  'solo-reference-EN.pdf':'solo-reference-EN.pdf',
+  'manifest.json':'manifest.json',
+  'manifest.pdf':'manifest.pdf',
+  'PRINT_README_UA_EN.pdf':'PRINT_README_UA_EN.pdf'
+};
+function activateDownloads(){
+  document.querySelectorAll('.placeholder').forEach(button=>{
+    const key=button.dataset.label;
+    const filename=downloadable[key];
+    if(!filename)return;
+    button.onclick=()=>{window.location.href='downloads/'+filename};
+    button.title=filename;
+    button.classList.add('available');
+  });
+}
+const originalRender=render;
+render=function(){originalRender();activateDownloads()};
+activateDownloads();
 </script></body></html>
