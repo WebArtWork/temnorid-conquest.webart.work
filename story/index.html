@@ -41,7 +41,7 @@ a{color:inherit;text-decoration:none}button,select{font:inherit}
 .hero{min-height:640px;display:flex;align-items:end;position:relative;background:
 linear-gradient(0deg,#090b0af8 5%,#090b0a99 45%,#090b0a55 75%),
 linear-gradient(90deg,#090b0af5,transparent 60%),
-url('assets/board.png') 50% 30%/cover}
+url('../assets/board.png') 50% 30%/cover}
 .hero .wrap{padding:170px 0 70px}
 .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.22em;color:var(--teal);font-weight:bold}
 .hero h1{font-size:clamp(46px,7.5vw,96px);font-weight:400;line-height:.98;letter-spacing:-.04em;margin:16px 0 10px}
@@ -85,7 +85,7 @@ blockquote{border-left:3px solid var(--gold);margin:34px 0;padding:2px 0 2px 26p
 .break .eyebrow{display:block;margin-bottom:14px}
 
 /* final panel */
-.final{padding:110px 0;background:linear-gradient(90deg,#090b0af5,#090b0a95,transparent),url('assets/throne.png') center/cover}
+.final{padding:110px 0;background:linear-gradient(90deg,#090b0af5,#090b0a95,transparent),url('../assets/throne.png') center/cover}
 .final .wrap{width:min(calc(100% - 40px),760px)}
 .final h2{font-size:clamp(36px,5.5vw,58px);font-weight:400;line-height:1.05}
 .final p{color:var(--paper);font-size:18px}
@@ -342,7 +342,7 @@ function render(){
     let html = `<span class="num">${c.num}</span><h2>${c.title}</h2>`;
     html += c.body.map(p=>`<p>${p}</p>`).join('');
     if(c.quote) html += `<blockquote>${c.quote}</blockquote>`;
-    if(c.illust) html += `<figure class="illust has-art"><img src="assets/story/${i===0?'prologue':'chapter-'+String(i).padStart(2,'0')}.png" alt="${c.illust.desc}" loading="lazy"></figure>`;
+    if(c.illust) html += `<figure class="illust has-art"><img src="../assets/story/${i===0?'prologue':'chapter-'+String(i).padStart(2,'0')}.png" alt="${c.illust.desc}" loading="lazy"></figure>`;
     if(c.final) html += `<p style="color:var(--paper);font-size:22px;margin-top:30px">${c.final}</p>`;
     s.innerHTML = html;
     content.appendChild(s);
@@ -350,13 +350,13 @@ function render(){
     if(i===2){
       const b = document.createElement('div');
       b.className='break';
-      b.innerHTML = `<span class="eyebrow">${MAP_BREAK[lang]}</span><figure class="illust has-art wide"><img src="assets/board.png" alt="${lang==='uk'?'Карта Темнороду з ключовими дорогами, містами й фортецями':'Map of Temnorid with key roads, cities and fortresses'}" loading="lazy"></figure>`;
+      b.innerHTML = `<span class="eyebrow">${MAP_BREAK[lang]}</span><figure class="illust has-art wide"><img src="../assets/board.png" alt="${lang==='uk'?'Карта Темнороду з ключовими дорогами, містами й фортецями':'Map of Temnorid with key roads, cities and fortresses'}" loading="lazy"></figure>`;
       content.appendChild(b);
     }
     if(i===4){
       const b = document.createElement('div');
       b.className='break';
-      b.innerHTML = `<figure class="illust has-art"><img src="assets/story/sealed-agreement.png" alt="${ARTIFACT_BREAK[lang]}" loading="lazy"></figure>`;
+      b.innerHTML = `<figure class="illust has-art"><img src="../assets/story/sealed-agreement.png" alt="${ARTIFACT_BREAK[lang]}" loading="lazy"></figure>`;
       content.appendChild(b);
     }
 
