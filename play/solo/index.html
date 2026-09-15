@@ -5,16 +5,15 @@
 <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="art.css"></head><body>
 <div id="setup" class="setup"></div>
 <div id="game" class="game hidden">
- <header class="top"><a href="/" class="brand">Temnorid: <i id="brandName">Завоювання</i></a><div class="round"><b id="roundLabel"></b><span id="battleTier"></span><strong id="turnLabel"></strong></div><div class="tools"><button id="langBtn">EN</button><a href="/rules" target="_blank" id="rulesLink">Правила</a><button id="menuBtn">☰</button></div></header>
+ <header class="top"><a href="/" class="brand">Temnorid: <i id="brandName">Завоювання</i></a><div class="headerstats" id="headerStats"></div><div class="factionstats" id="factionStats"></div><div class="round"><b id="roundLabel"></b><span id="battleTier"></span><strong id="turnLabel"></strong></div><div class="tools"><button id="menuBtn">☰</button></div></header>
  <main class="table">
-  <aside class="factions panel"><h2 id="factionTitle">Фракції</h2><div id="factionTracks"></div><div class="log"><h3 id="logTitle">Історія</h3><div id="gameLog"></div></div></aside>
+  <aside class="you panel" id="youPanel"><div id="youInfo"></div><div class="handwrap"><div class="sectionhead"><h2 id="handTitle">Твоя рука</h2></div><div class="hand" id="hand"></div></div></aside>
   <section class="board panel" id="board"><div class="map" id="map"><img src="../../assets/board.png" alt="Temnorid map"><div id="locations"></div><div class="zoom"><button id="zoomOut">−</button><button id="center">⌾</button><button id="zoomIn">+</button></div></div></section>
-  <aside class="rightcol"><section class="rival panel" id="rivalA"></section><section class="battle panel" id="battle"></section><section class="rival panel" id="rivalB"></section></aside>
+  <aside class="rightcol"><section class="rival panel" id="rivalA"></section><section class="rival panel" id="rivalB"></section><section class="battle panel" id="battle"></section><button class="reveal" id="revealBtn">Розкрити карти</button></aside>
   <section class="market panel"><div class="sectionhead"><h2 id="marketTitle">Світовий Ринок</h2><span id="authority"></span></div><div class="marketrow" id="marketCards"></div></section>
-  <section class="player panel"><div class="playerstats" id="playerStats"></div><div class="handwrap"><div class="sectionhead"><h2 id="handTitle">Твоя рука</h2><span id="hint"></span></div><div class="hand" id="hand"></div></div><button class="reveal" id="revealBtn">Розкрити карти</button></section>
  </main>
- <nav class="mobiletabs" id="mobileTabs"><button data-tab="board">Карта</button><button data-tab="player">Карти</button><button data-tab="market">Ринок</button><button data-tab="rightcol">Битва</button><button data-tab="factions">Фракції</button></nav>
+ <nav class="mobiletabs" id="mobileTabs"><button data-tab="board">Карта</button><button data-tab="you">Карти</button><button data-tab="market">Ринок</button><button data-tab="rightcol">Битва</button></nav>
 </div>
-<dialog id="menu"><button class="close" id="closeMenu">×</button><h2 id="menuTitle">Меню гри</h2><button id="continueBtn">Продовжити</button><a href="/rules">Правила</a><button id="restartBtn">Почати заново</button><a href="../">Вийти з гри</a><small id="seed"></small></dialog>
+<dialog id="menu"><button class="close" id="closeMenu">×</button><h2 id="menuTitle">Меню гри</h2><button id="continueBtn">Продовжити</button><button id="langBtn">EN</button><a href="/rules" id="rulesLink">Правила</a><button id="restartBtn">Почати заново</button><a href="../">Вийти з гри</a><small id="seed"></small></dialog>
 <div class="toast" id="toast"></div><div class="roundflash hidden" id="roundFlash"></div>
 <script src="engine.js"></script><script src="app.js"></script><script src="art.js"></script></body></html>

@@ -39,5 +39,5 @@
 <script>
 let lang=localStorage.getItem('temnorid-lang')||'uk';function applyLang(){document.documentElement.lang=lang;document.querySelectorAll('[data-uk]').forEach(e=>e.textContent=e.dataset[lang]);document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));document.querySelectorAll('.card.disabled').forEach(c=>c.dataset.soon=lang==='uk'?'Незабаром':'Coming Soon');localStorage.setItem('temnorid-lang',lang)}document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;applyLang()});document.getElementById('solo').onclick=()=>{const t=document.getElementById('toast');t.textContent=lang==='uk'?'Одиночна гра — наступний етап розробки.':'Solo game is the next development stage.';t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),2800)};applyLang();
 </script>
-<script>document.getElementById('solo').onclick=()=>location.href='play/solo/';</script>
+<script>document.getElementById('solo').onclick=()=>location.href='solo/';</script>
 </body></html>
